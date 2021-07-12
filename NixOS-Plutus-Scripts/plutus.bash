@@ -87,6 +87,8 @@ else
   # and checkout to the commit ID that was alredy verified
   if [ -z "$2" ]
   then
+    echo >&2 "No commit ID specified, using HEAD..."
+  else
     git checkout $2
   fi
 fi
