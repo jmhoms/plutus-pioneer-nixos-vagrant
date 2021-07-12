@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script to clone or update the Plutus Pioneer repository
 # Define the destination directory 
-DIR='/vagrant/plutus-pioneer-program'
+DIR='/opt/plutus-pioneer-program'
 # Get using git
 if test -d "$DIR"; 
   then cd "$DIR" && git pull --ff-only; 
