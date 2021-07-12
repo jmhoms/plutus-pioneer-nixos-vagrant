@@ -89,6 +89,7 @@ else
   then
     echo >&2 "No commit ID specified, using HEAD..."
   else
+    echo >&2 "Starting checkout of ID $2"
     git checkout $2
   fi
 fi
