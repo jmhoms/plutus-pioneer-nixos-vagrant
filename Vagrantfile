@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "initial-configure-nix", type: "shell", :path => "NixOS-Plutus-Scripts/apply-initial-configuration.sh", privileged: true 
   config.vm.provision "resize-fs", type: "shell", :path => "NixOS-Plutus-Scripts/resize-fs.sh", privileged: true
   config.vm.provision "plutus", type: "shell", :path => "NixOS-Plutus-Scripts/plutus-cohort02-week01.bash", privileged: false
-  config.vm.provision "plutus", type: "shell", :path => "NixOS-Plutus-Scripts/plutus-pioneer.bash", privileged: false
+  config.vm.provision "plutus-pioneer", type: "shell", :path => "NixOS-Plutus-Scripts/plutus-pioneer.bash", privileged: false
   config.vm.provision "shell", inline: <<-SHELL
     echo "Provisioning finished. Run "vagrant ssh" to login into the system."
     echo "Be aware that Plutus services may take some minutes to start."
