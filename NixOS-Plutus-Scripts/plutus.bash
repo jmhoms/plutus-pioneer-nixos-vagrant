@@ -68,6 +68,7 @@ then
   # remove any previous install
   if test -d /opt/plutus; then rm -rf /opt/plutus; fi
   # use the contents from the temporary directory
+  cd /opt
   mv /opt/plutus-new /opt/plutus
   cd /opt/plutus
 else
@@ -112,5 +113,5 @@ sudo nixos-rebuild switch
 # Start the services
 sudo systemctl start PlutusPlaygroundServer
 sudo systemctl start PlutusPlaygroundClient
-# Return to the initial directory
-cd - > /dev/null
+# Return to the initial directory (not needed when running from a new shell)
+#cd - > /dev/null
