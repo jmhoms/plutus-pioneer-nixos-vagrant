@@ -38,7 +38,7 @@ https://www.vagrantup.com/docs/installation
     ```
 
 3. Customise anything you want, mainly by editing two files:
-    - Vagrantfile: to change things like the amount of memory and hard disk to be provisioned.
+    - Vagrantfile: to change things like which weekly wrapper script to use, and the amount of memory and hard disk to be provisioned.
     - Nixos-Plutus-Scripts/configuration.nix: to change any configuration related to the deployment of the operating system, for example to include an additional package. For more information visit https://nixos.org/manual/nixos/stable/#sec-configuration-syntax
 
 4. Deploy the service: this action may take around a half hour to download and build the system, depending on the resources available.
