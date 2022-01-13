@@ -20,7 +20,7 @@ if test -d /opt; then cd /opt; else sudo mkdir /opt && sudo chown vagrant /opt &
 # Checking if previous temp repository dir exists
 if test -d /opt/plutus-new; then rm -rf /opt/plutus-new; fi
 # Clone the repository into a temporary directory
-git clone https://github.com/input-output-hk/plutus /opt/plutus-new
+git clone https://github.com/input-output-hk/plutus-apps /opt/plutus-new
 ret=$?
 if ! test "$ret" -eq 0
 then
@@ -95,7 +95,8 @@ else
   fi
 fi
 # Start build process
-nix build -f default.nix plutus.haskell.packages.plutus-core
+#nix build -f default.nix plutus.haskell.packages.plutus-core
+nix-build -A plutus-playground.server
 ret=$?
 if ! test "$ret" -eq 0
 then
