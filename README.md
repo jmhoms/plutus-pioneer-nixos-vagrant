@@ -130,4 +130,4 @@ https://www.vagrantup.com/docs/installation
 ## Alternatives
 Other options to deploy the Plutus Pioneer toolset are documented in this great community-driven documentation website:
 
-https://docs.plutus-community.com/
+https://plutus-community.readthedocs.io/
